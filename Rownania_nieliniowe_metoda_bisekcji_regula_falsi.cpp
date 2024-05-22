@@ -28,6 +28,17 @@ void write_function(FunctionPointer func)
     else cout << "Brak wzoru\n\n";
 }
 
+void wynik(FunctionPointer func)
+{
+    if (func == func1) cout <<  "Wynik dokladny: 1.708608\n";
+
+    else if (func == func2) cout << "Wynik dokladny: 3.387619\n";
+
+    else if (func == func3) cout << "Wynik dokladny: 1.85728\n";
+
+    else cout << "Brak wzoru\n\n";
+}
+
 void bisection_method(FunctionPointer func, double a, double b, double epsilon)
 {
     double x0;
@@ -50,6 +61,7 @@ void bisection_method(FunctionPointer func, double a, double b, double epsilon)
     }
 
     cout << "Wynik koncowy: x = " << x0 << "\n";
+    wynik(func);
     cout << "Ilosc iteracji: " << i << "\n\n";
 }
 
@@ -75,6 +87,7 @@ void regula_falsi(FunctionPointer func, double a, double b, double epsilon)
     }
 
     cout << "Wynik koncowy: x = " << x1 << "\n";
+    wynik(func);
     cout << "Ilosc iteracji: " << i << "\n\n";
 }
 
